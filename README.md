@@ -1,8 +1,6 @@
 # leetCode
 
-Improve my coding skill
-They are python notebook files. Different level has different files.
-Try to solve them as soon as possible
+Victoria Concordia Crescit
 
 ## Run
 ### Terminal:
