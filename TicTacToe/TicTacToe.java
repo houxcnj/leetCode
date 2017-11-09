@@ -21,6 +21,23 @@ class TicTacToe {
                 1: Player 1 wins.
                 2: Player 2 wins. */
     public int move(int row, int col, int player) {
+    	int addon = player == 1 ? 1 : -1;
         
+        rows[row] += addon;
+        cols[col] += addon;
+        
+        if (row == col) {
+            dia += addon;
+        }
+        if (row + col == rows.length - 1) {
+            antiDia += addon;
+        }
+        
+        int len = rows.length;
+        if (Math.abs(rows[row]) == len || Math.abs(cols[col]) == len ||
+           Math.abs(dia) == len || Math.abs(antiDia) == len) {
+            return player;
+        }
+        return 0;
     }
 }
