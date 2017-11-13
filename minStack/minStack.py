@@ -13,7 +13,6 @@ class MinStack(object):
 		curMin = self.getMin()
 		if curMin == None or curMin > x:
 			curMin = x
-
 		self.stack.append((x, curMin))
 
 	def pop(self):
@@ -30,6 +29,7 @@ class MinStack(object):
 			return None
 		return self.stack[-1][0]
 
+
 	def getMin(self):
 		"""
 		:rtype: int
@@ -37,4 +37,3 @@ class MinStack(object):
 		if not self.stack:
 			return None
 		return self.stack[-1][1]
-		
